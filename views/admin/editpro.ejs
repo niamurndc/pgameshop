@@ -1,0 +1,29 @@
+<!-- main seciton star -->
+<section class="container container-custom mt-3">
+  <div class="row">
+    <div class="col-md-6">
+      
+    </div>
+    <div class="col-md-6 fbox-flex">
+      <form method="post" action="/product/edit/<%= pro._id %> ">
+        <div class="form-group">
+          <label for="catid">Category</label>
+          <input type="text" name="catid" id="catid" class="form-control" value="<%=pro.catid%>">
+        </div>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" class="form-control" value="<%=pro.name%>">
+        </div>
+        <div class="form-group">
+          <label for="price">Price</label>
+          <input type="text" name="price" id="price" class="form-control" value="<%=pro.price%>">
+        </div>
+        <input type="submit" value="Confirm" class="btn btn-success full-width">
+      </form>
+    </div>
+  </div>
+
+  <hr>
+  <p class="text-center my-4"> <a href="#" class="service-text">Customer Care</a></p>
+  <hr>
+</section>

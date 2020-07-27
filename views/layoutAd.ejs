@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <title>Admin | PGameShop</title>
+  </head>
+  <body class="main">
+    <nav class="navbar navbar-expand-lg navbar-custom">
+      <div class="container container-custom">
+        <a class="custom-brand" href="/order">PGameShop | Admin</a>
+        <% if (user != undefined) { %>
+        <ul class="navbar-nav mr-auto ml-4">
+          <li class="nav-item">
+            <a class="nav-link" href="/cat">Category</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/product">Product</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/order">Order</a>
+          </li>
+        </ul>
+        <% if (user != undefined) { %>
+        <a href="#" class="mr-2 text-light">Loggedin <%= user.username %> </a>
+        <% } %>
+        <a href="/admin/logout" class="btn btn-outline-success">Logout</a>
+        <% } %>
+      </div>
+    </nav> 
+    <!-- navbar end -->
+    
+    <%- body %>
+
+    <!-- footer end -->
+    <footer>
+      <div class="container container-custom text-center pt-2 pb-1">
+        <p class="mb-0">&copy; PGameShopOnline All Right Reserved</p>
+        <p> <a href="#">FAQ</a>  |  <a href="#">Terms & Conditions</a>  |  <a href="#">Pervacy Policy</a> </p>
+      </div>
+    </footer>
+    <script src="/js/code.js"></script>
+  </body>
+</html>

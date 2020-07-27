@@ -1,0 +1,33 @@
+<!-- main seciton star -->
+<section class="container container-custom mt-3">
+  <div class="row">
+    <div class="col-md-6">
+      
+    </div>
+    <div class="col-md-6 fbox-flex">
+      <form method="post">
+        <div class="form-group">
+          <label for="note">Category</label>
+          <select name="catid" id="" class="form-control">
+            <% cats.forEach(cat => { %>
+              <option value="<%= cat.name %>"><%= cat.name %></option>
+            <% }) %>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="price">Price</label>
+          <input type="text" name="price" id="price" class="form-control">
+        </div>
+        <input type="submit" value="Confirm" class="btn btn-success full-width">
+      </form>
+    </div>
+  </div>
+
+  <hr>
+  <p class="text-center my-4"> <a href="#" class="service-text">Customer Care</a></p>
+  <hr>
+</section>

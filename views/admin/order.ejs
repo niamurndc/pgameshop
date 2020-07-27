@@ -1,0 +1,40 @@
+
+<!-- main seciton star -->
+<section class="container container-custom">
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table text-light mt-4">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Detail</th>
+            <th scope="col">Mobile No</th>
+            <th scope="col">Time</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody id="tbl">
+          <% orders.forEach(order => { %>
+            <tr class="coll ">
+              <td><%= order.name %></td>
+              <td><%= order.detail %></td>
+              <td><%= order.mnum %></td>
+              <td><%= order.otime %></td>
+              <td>
+                <% if (order.status == 0) { %>
+                  <a href="/order/edit/<%= order._id %>" class="btn btn-info btn-sm">Edit</a>
+                <% }else{ %>
+                  <a href="#" class="btn btn-warning btn-sm">Complete</a>
+                <% } %>
+                 </td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <hr>
+  <p class="text-center my-4"> <a href="#" class="service-text">Customer Care</a></p>
+  <hr>
+</section>

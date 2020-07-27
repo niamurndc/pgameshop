@@ -1,0 +1,33 @@
+
+    <!-- slide section star -->
+    <section class="container container-custom">
+      <div class="row my-2">
+        <img src="/img/slider.jpg" class="slide-img">
+      </div>
+    </section>
+    <!-- main seciton star -->
+    <section class="container container-custom">
+      <!-- subheading -->
+      <div class="sub-head mb-2">
+        <div class="name">
+          Select a product category.
+        </div>
+        <div class="text-right">
+          <a href="index.html" class="btn btn-sm btn-fb">facebook</a>
+        </div>
+      </div>
+      <div class="row">
+        <% cats.forEach(cat => { %>
+          <div class="col-md-4 col-6 custom-flex pb-md-4 pt-md-5 pt-2">
+            <a href="/cart/<%= cat.name %>" class="text-center">
+              <img src="/upload/<%= cat.logo %>" class="main-logo">
+              <p><%= cat.name %> </p>
+            </a>
+          </div>
+        <% }) %>
+      </div>
+
+      <hr>
+      <p class="text-center my-4"> <a href="#" class="service-text">Customer Care</a></p>
+      <hr>
+    </section>

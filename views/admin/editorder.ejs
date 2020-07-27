@@ -1,0 +1,24 @@
+<!-- main seciton star -->
+<section class="container container-custom mt-3">
+  <div class="row">
+    <div class="col-md-6">
+      
+    </div>
+    <div class="col-md-6 fbox-flex">
+      <form method="post" action="/order/edit/<%= order._id %> ">
+        <div class="form-group">
+          <label for="status">Status</label>
+          <select name="status" id="status" class="form-control">
+            <option value="0">Processing</option>
+            <option value="1">Complete</option>
+          </select>
+        </div>
+        <input type="submit" value="Confirm" class="btn btn-success full-width">
+      </form>
+    </div>
+  </div>
+
+  <hr>
+  <p class="text-center my-4"> <a href="#" class="service-text">Customer Care</a></p>
+  <hr>
+</section>

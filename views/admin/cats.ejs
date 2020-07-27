@@ -1,0 +1,35 @@
+
+<!-- main seciton star -->
+<section class="container container-custom">
+  <a href="cat/add" class="btn btn-info my-2 btn-sm">Add Category</a>
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table text-light">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Note</th>
+            <th scope="col">Input Name</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody id="tbl">
+          <% cats.forEach(cat => { %>
+            <tr class="coll ">
+              <td><%= cat.name %></td>
+              <td><%= cat.note %></td>
+              <td><%= cat.finput %></td>
+              <td><a href="/cat/edit/<%= cat._id %>" class="btn btn-info btn-sm">Edit</a> </td>
+              <td><a href="cat/delete/<%= cat._id %>" class="btn btn-danger btn-sm">Delete</a> </td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <hr>
+  <p class="text-center my-4"> <a href="#" class="service-text">Customer Care</a></p>
+  <hr>
+</section>

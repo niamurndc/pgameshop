@@ -1,0 +1,35 @@
+
+<!-- main seciton star -->
+<section class="container container-custom">
+  <a href="product/add" class="btn btn-info my-2 btn-sm">Add Product</a>
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table text-light">
+        <thead>
+          <tr>
+            <th scope="col">Category</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody id="tbl">
+          <% pros.forEach(pros => { %>
+            <tr class="coll ">
+              <td><%= pros.catid %></td>
+              <td><%= pros.name %></td>
+              <td><%= pros.price %></td>
+              <td><a href="/product/edit/<%= pros._id %>" class="btn btn-sm btn-primary">Edit</a> </td>
+              <td><a href="/product/delete/<%= pros._id %>" class="btn btn-sm btn-danger">Delete</a> </td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <hr>
+  <p class="text-center my-4"> <a href="#" class="service-text">Customer Care</a></p>
+  <hr>
+</section>
